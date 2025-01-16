@@ -32,6 +32,19 @@ const skilledPersonSchema = new mongoose.Schema({
     certificate: String,
     birthdate: String,
     rating: Number,
+    isAccepted: {
+        type: Boolean,
+        default: false,
+      },
+      notifications: [
+        {
+          message: String,
+          date: {
+            type: Date,
+            default: Date.now,
+          },
+        },
+      ],  
     reviews: Array,
     isVerified: Boolean,
     isBlocked: Boolean,

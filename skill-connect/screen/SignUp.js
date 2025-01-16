@@ -21,9 +21,14 @@ const SignUp = () => {
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState('');
   const [password, setPassword] = useState('');
+  const [location, setLocation] = useState('');
+  const [locationError, setLocationError] = useState('');
+  const [phone, setPhone] = useState('');
+  const [phoneError, setPhoneError] = useState('');
   const [passwordError, setPasswordError] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [confirmPasswordError, setConfirmPasswordError] = useState('');
+  cont [userType, setUserType] = useState('user');
  
 const navigation = useNavigation();
  
@@ -43,6 +48,24 @@ const navigation = useNavigation();
       setEmailError('Invalid email address');
     } else {
       setEmailError('');
+    }
+  };
+
+  const validLocation = (text) => {
+    setLocation(text);
+    if (text.length < 2) {
+      setLocationError('Location must be at least 2 characters long');
+    } else {
+      setLocationError('');
+    }
+  };
+
+  const validPhone = (text) => {
+    setPhone(text);
+    if (text.length < 2) {
+      setPhoneError('Phone must be at least 2 characters long');
+    } else {
+      setPhoneError('');
     }
   };
 
@@ -70,7 +93,9 @@ const navigation = useNavigation();
       name: name,
       email: email, 
       password: password,
-      
+      location: location,
+      phone: phone,
+      userType: userType
     })
     .then(response => {
       console.log(response.data);
@@ -84,6 +109,8 @@ const navigation = useNavigation();
       setEmailError('');
       setPasswordError('');
       setConfirmPasswordError('');
+      setLocation('');
+      setPhone('');
 
     })
     .catch(error => {
@@ -186,6 +213,44 @@ const navigation = useNavigation();
     </View>
     { confirmPassword . length >0 && confirmPasswordError ? <Text style={ScreenStyles.errorText}>{confirmPasswordError}</Text> : null}
     
+    <View style={ScreenStyles.inputContainer}>
+      <TextInput
+        placeholder="Current Location"
+        autoCapitalize="none"
+        autoCorrect={false}
+        secureTextEntry={true}
+        style={ScreenStyles.login_input}
+        value={location}
+        onChangeText={validLocation}
+      />
+      { confirmPassword . length >0 && (
+      confirmPasswordError ? (
+        <Ionicons name="close-circle" size={15} color="red" style={ScreenStyles.inputIcon} />
+      ) : (
+        <Ionicons name="checkmark-circle" size={15} color="green" style={ScreenStyles.inputIcon} />
+      )
+    )}
+    </View>
+    { location. length >0 && locationError ? <Text style={ScreenStyles.errorText}>{locationError}</Text> : null}
+    <View style={ScreenStyles.inputContainer}>
+      <TextInput
+        placeholder="Phone number"
+        autoCapitalize="none"
+        autoCorrect={false}
+        secureTextEntry={true}
+        style={ScreenStyles.login_input}
+        value={phone}
+        onChangeText={validPhone}
+      />
+      { confirmPassword . length >0 && (
+      confirmPasswordError ? (
+        <Ionicons name="close-circle" size={15} color="red" style={ScreenStyles.inputIcon} />
+      ) : (
+        <Ionicons name="checkmark-circle" size={15} color="green" style={ScreenStyles.inputIcon} />
+      )
+    )}
+    </View>
+    { phone . length >0 && phoneError ? <Text style={ScreenStyles.errorText}>{phoneError}</Text> : null}
     
     
     <TouchableOpacity style={ScreenStyles.googleButton}>

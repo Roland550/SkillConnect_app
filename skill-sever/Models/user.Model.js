@@ -13,6 +13,19 @@ const userSchema = new mongoose.Schema({
     default: "https://cdn-icons-png.flaticon.com/512/149/149071.png"
 
   },
+  location: String,
+  phone: String,
+  userType: String,
+  notifications: [
+    {
+      message: String,
+      date: {
+        type: Date,
+        default: Date.now,
+      },
+    },
+  ],
+  
 });
 
 const User = mongoose.model("UserInfo", userSchema);

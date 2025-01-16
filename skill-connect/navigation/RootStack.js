@@ -20,6 +20,8 @@ import ApplyAccountForm from "../components/ApplyAccountForm";
 import CardDetail from "../components/CardDetail";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import Editprofile from "../components/Editprofile";
+import Messages from "../components/Messages";
+
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -74,7 +76,7 @@ function TabNavigator() {
       <Tab.Screen
         name="People"
         component={People}
-        initialParams={{ screen: "People" }}
+        initialParams={{ screen: "people" }}
         options={{
           headerShown: false,
           showLabel: false,
@@ -177,6 +179,11 @@ function StackNavigator() {
       <Stack.Screen
         name="Profile"
         component={Profile}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="messages"
+        component={Messages}
         options={{ headerShown: false }}
       />
       <Stack.Screen name="Login" component={Login} />

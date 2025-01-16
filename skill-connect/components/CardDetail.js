@@ -1,6 +1,8 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, Button, TouchableOpacity, Linking, Alert,  } from 'react-native';
+import { View, Text, StyleSheet, Image, Button, TouchableOpacity, Linking, Alert, ScrollView,  } from 'react-native';
 import  FileViewer from "react-native-file-viewer";
+import { ComponentStyles } from './Styles';
+
 
 const CardDetail = ({ route }) => {
 
@@ -15,24 +17,29 @@ const CardDetail = ({ route }) => {
    
   }
   return (
-    <View style={styles.container}>
-      <Image source={{ uri: card.image }} style={styles.image} />
-      <Text style={styles.title}>{card.name}</Text>
-      <Text style={styles.experience}>{card.experience}</Text>
-      <Text style={styles.experience}>{card.location}</Text>
-      <Text style={styles.description}>{card.about}</Text>
-     
-      <Text style={styles.description}>{card.contact}</Text>
-      <TouchableOpacity onPress={() => handlePDFPress(user.cv)}>
-        <Text >CV</Text>
-      </TouchableOpacity>
-
-      <Button title="Mail_me" onPress={() => Linking.openURL(`mailto:${card.email}`)} />
-       <Button title="Call" onPress={() => Linking.openURL(`tel:${card.contact}`)} /> 
-       
-        <Button title="Location" onPress={() => Linking.openURL(`geo:${card.location}`)} />
+    <ScrollView style={ComponentStyles.container00}>
+    <View style={ComponentStyles.profileHeader}>
+      <Image source={{ uri: card.image }} style={ComponentStyles.profileImage} />
       
     </View>
+    <View style={ComponentStyles.profileInfo}>
+        <Text style={ComponentStyles.profileName}>{card.name}</Text>
+        
+       
+      </View>
+    <View style={ComponentStyles.profileDetails}>
+    <Text style={ComponentStyles.profileSectionTitle}>About me</Text>
+      <Text style={ComponentStyles.profileDescription}>{card.about}</Text>
+      <Text style={ComponentStyles.profileOccupation}>Occcupation: {card.occupation}</Text>
+        <Text style={ComponentStyles.profileOccupation}>Email: {card.email}</Text>
+      <Text style={ComponentStyles.profileDescription}>Location:{card.location}</Text>
+      
+      <Text style={ComponentStyles.profileContact}>Contact: {card.contact}</Text>
+      <Text style={ComponentStyles.profileExperience}>{card.experience} years of experience</Text>
+      <Text style={ComponentStyles.profileDescription}>{card.description}</Text>
+      <Button title="View Resume" onPress={() => Linking.openURL(card.cv)} />
+    </View>
+  </ScrollView>
   );
 };
 

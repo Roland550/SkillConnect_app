@@ -321,4 +321,150 @@ export const ComponentStyles = StyleSheet.create({
       color: '#fff',
       fontSize: 16,
     },
+
+    //Messages
+    messages: {
+      
+      width: "100%",
+     
+      flexDirection: "column",
+      
+      backgroundColor: "#f5f5f1",
+      
+      borderWidth: 1,
+      borderColor: "#c5c5c5",
+     
+      marginTop: 40,
+    },
+    messages_content : {
+      width: "100%",
+      height: 150,
+      flexDirection: "row",
+      justifyContent: "center",
+      backgroundColor: "#f5f5f1",
+      paddingHorizontal: 50,
+      paddingVertical: 5,
+      borderWidth: 1,
+      borderColor: "#c5c5c5",
+      
+
+
+    },
+    messages_content_image: {
+      width: 80,
+      height: 80,
+      borderRadius: 100,
+      marginRight: 10,
+      justifyContent: "center",
+      alignItems: "center", 
+      marginVertical: 30, 
+      backgroundColor: "#758ba5",
+     
+    },
+    messages_content_title: {
+      width: "100%",
+      fontSize: 15,
+      fontWeight: "bold",
+      color: "#221f1f",
+      textAlign: "center",
+      alignSelf: "center",
+      paddingHorizontal: 10,
+      marginHorizontal: 10,
+    },
+    messages_content_text: {
+      
+      fontSize: 13,
+      fontWeight: "normal",
+      color: "#221f1f",
+      
+      
+      
+    },
+    messages_icon: {
+     
+      
+     
+      alignItems: "flex-end",
+      textAlign: "right",
+      color: "#f5f5f1",
+      alignSelf: "flex-end",
+    },
+
+    //notifications
+    notificationItem: {
+      padding: 16,
+      borderBottomWidth: 1,
+      borderBottomColor: '#ccc',
+    },
+    notificationMessage: {
+      fontSize: 16,
+      marginBottom: 8,
+    },
+    notificationDate: {
+      fontSize: 12,
+      color: '#888',
+    },
+
+    ///card
+    container00: {
+      flex: 1,
+      backgroundColor: '#fff',
+    },
+    profileHeader: {
+      width: '100%',
+      height: 230,
+      marginTop: 40,
+      paddingTop: 10,
+      flexDirection: 'row',
+      padding: 16,
+      
+      // backgroundColor: '#f8f8f8',
+      // borderBottomWidth: 1,
+      // borderBottomColor: '#ddd',
+    },
+    profileImage: {
+      width: '100%',
+    height: 200,
+    resizeMode: 'contain',
+      marginRight: 16,
+      borderRadius: 20,
+      overflow: 'hidden',
+    },
+    profileInfo: {
+      justifyContent: 'center',
+      alignItems: 'center',
+      
+    },
+    profileName: {
+      fontSize: 24,
+      fontWeight: 'bold',
+      textAlign: 'center',
+    },
+    profileOccupation: {
+      fontSize: 18,
+      color: '#666',
+    },
+    profileExperience: {
+      fontSize: 16,
+      color: '#888',
+    },
+    profileDetails: {
+      padding: 16,
+    },
+    profileSectionTitle: {
+      fontSize: 20,
+      fontWeight: 'bold',
+      marginTop: 10,
+      textAlign: 'center',
+    },
+    profileContact: {
+      fontSize: 16,
+      color: '#333',
+      marginTop: 8,
+    },
+    profileDescription: {
+      fontSize: 16,
+      color: '#333',
+      marginTop: 8,
+    },
 })

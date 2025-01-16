@@ -27,10 +27,9 @@ const ScreenStyles = StyleSheet.create({
     backgroundColor: "#f5f5f1",
   },
   inputContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  
-   
+    flexDirection: "row",
+    alignItems: "center",
+
     marginBottom: 10,
     paddingHorizontal: 10,
   },
@@ -82,12 +81,12 @@ const ScreenStyles = StyleSheet.create({
     padding: 10,
     margin: 10,
   },
-  googleButton:{
+  googleButton: {
     width: 350,
     paddingLeft: 45,
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: '#221f1f',
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#221f1f",
     // borderColor: '#ddd',
     borderWidth: 1,
     textAlign: "center",
@@ -95,10 +94,8 @@ const ScreenStyles = StyleSheet.create({
     padding: 10,
     paddingHorizontal: 40,
     margin: 10,
-   
+
     shadowOffset: { width: 0, height: 2 },
-   
-   
   },
   googleIcon: {
     width: 20,
@@ -108,8 +105,8 @@ const ScreenStyles = StyleSheet.create({
   },
   googleText: {
     fontSize: 16,
-    color: '#f5f5f1',
-    fontWeight: '500',
+    color: "#f5f5f1",
+    fontWeight: "500",
     textAlign: "center",
   },
   login_input: {
@@ -159,160 +156,111 @@ const ScreenStyles = StyleSheet.create({
   },
 
   //Dashborad
-  dashboard: {
-    
-   width: "100%",
-   height: "100%",
-    backgroundColor: "#f5f5f1",
-  },
+  dashboard: {},
   dashboard_header: {
     width: "100%",
     height: 80,
     flexDirection: "row",
+    justifyContent: "space-between",
     alignItems: "center",
-    backgroundColor: "#f5f5f1",
-    justifyContent: "flex-start",
-    lineHeight: 0.2,
-    paddingTop:30,
-    marginBottom: 0,  
-    fontSize: 30,
-    fontWeight: "bold",
-    color: "#221f1f",
-    elevation: 0,
+
+    paddingTop: 40,
+    padding: 10,
+    marginBottom: 10,
   },
   dashboard_title: {
-    fontSize: 30,
+    fontSize: 24,
     fontWeight: "bold",
-    color: "#221f1f",
-    textAlign: "left",
-    alignSelf: "flex-start",
-    marginStart: 0,
   },
   dashboard_icon_container: {
-    width: "60%",
-    
     flexDirection: "row",
-    alignItems: "center",
-    
-    justifyContent: "flex-end",
-    
-    
-    fontSize: 30,
-    fontWeight: "bold",
-    color: "#221f1f",
-    
   },
   dashboard_icon: {
-    
-    paddingHorizontal: 10,
+    marginLeft: 10,
   },
   dashboard_category: {
     flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    padding: 10,
 
-    
   },
   dashboard_category_text: {
-    width: "auto",
-    height: "100%",
-    fontSize: 15,
-    fontWeight: "normal",
-    backgroundColor: "#f5f5f1",
-    borderColor: "#ddd",
-    borderWidth: 1,
-    color: "#221f1f",
+    marginHorizontal: 10,
     paddingVertical: 5,
-    paddingHorizontal: 10,
-    borderRadius: 8,
-    marginEnd: 5,
+    paddingHorizontal: 15,
+    borderRadius: 20,
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
+    backgroundColor: "#f5f5f1",
+    elevation: 1,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 3,
+    minWidth: 100,
+    maxWidth: 200, 
   },
-  dashboard_card_container: {
-    flex: 1,
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "space-between",
+  selectedCategory: {
+    fontSize: 16,
+    fontWeight: "bold",
+    color: "#007bff",
+    textAlign: "center",
+    backgroundColor: "#d1e7fd",
     padding: 3,
   },
-  dashboard_card: {
-    width: "49%",
-    aspectRatio: 1,
+  selectedCategoryText: {
+    backgroundColor: "#d1e7fd",
+    padding: 1
+  },
+  category: {
+    fontSize: 16,
+    color: "black",
     
-    
-    
+    textAlign: "center",
+  },
+  scrollContainer: {
+    flexGrow: 1,
+  },
+  dashboard_card_container: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
     padding: 10,
-   
-    backgroundColor: "#fff",
-    borderRadius: 5,
-    marginBottom: 5,
-    elevation: 0,
-    
+  },
+  dashboard_card: {
+    backgroundColor: "#f9f9f9",
+    padding: 15,
+    borderRadius: 10,
+    marginBottom: 15,
+    width: "45%",
   },
   dashboard_card_image: {
     width: "100%",
-    height: "50%",
-    resizeMode: "contain",
-   
+    height: 150,
+    borderRadius: 10,
   },
   dashboard_card_title: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: "bold",
-    color: "#221f1f",
+    marginTop: 10,
   },
   dashboard_card_experience: {
-    width: 20,
-    height: 20,
-    color: "#ddd",
-    fontWeight: "bold",
-    fontFamily: "palatino",
-    marginRight: 5,
+    fontSize: 14,
+    color: "#666",
+    marginTop: 5,
   },
-  dashboard_card_experience_logo: {
-    width: 20,
-    height: 20,
-    color: "#3684DB",
-    fontWeight: "bold",
-    fontFamily: "palatino",
-    marginRight: 5,
+  dashboard_card_pdf_link: {
+    fontSize: 14,
+    color: "#007bff",
+    marginTop: 5,
   },
-  dashboard_card_experience_logo2: {
-    width: 20,
-    height: 20,
-    color: "#221f1f",
-    fontWeight: "bold",
-    fontFamily: "poiret",
-    marginRight: 5,
-  },
-  dashboard_card_text: {
-    fontSize: 15,
-    fontWeight: "normal",
-    color: "#221f1f",
-  },
-  dashboard_card_experience: {
-    fontSize: 15,
-    fontWeight: "normal",
-    color: "#c5c5c5",
-  },
-  bacImage: {
-   
-    width: "100%",
-    height: "40%",
-    backgroundColor: "#221f1f",
-  },
-  bacImage_content: {
+
+  //Profile
+  messages: {
     flex: 1,
-    height: "auto",
-    alignItems: "center",
     justifyContent: "center",
-   
-    
-  },
-  bacImage_text: {
-    fontSize: 30,
-    fontWeight: "bold",
-    color: "#fff",
-    textAlign: "center",
+    alignItems: "center",
+    backgroundColor: "red",
+    marginTop: 40,
   },
 });
 
